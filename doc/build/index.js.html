@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>index.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="../doc-style.css" />
+  <script src="../doc-filelist.js"></script>
+  <script>
+    var relativeDir = "../";
+    var thisFile = "build\\index.js";
+    var defaultSidebar = true;
+  </script>
+  <script src="../doc-script.js"></script>
+
+</head>
+<body>
+  <div id="sidebar_wrapper">
+    <div id="sidebar_switch">
+      <span class="tree">Files</span>
+      <span class="headings">Headings</span>
+    </div>
+    <div id="tree"></div>
+    <div id="headings">
+
+    </div>
+  </div>
+  <div id="sidebar-toggle"></div>
+  <div id="container">
+    <div class="background highlight"></div>
+<table cellpadding="0" cellspacing="0">
+  <tbody>
+    
+      <tr>
+        <td class="docs">
+          <h1>index.js</h1>
+        </td>
+        <td class="code highlight"></td>
+      </tr>
+    
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-1" id="section-1"></a>
+</div>
+
+        </td>
+        <td class="code highlight">
+          <pre class="javascript"><span class="hljs-meta">"use strict"</span>;
+<span class="hljs-keyword">var</span> __awaiter = (<span class="hljs-keyword">this</span> &amp;&amp; <span class="hljs-keyword">this</span>.__awaiter) || <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">thisArg, _arguments, P, generator</span>) </span>{
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">adopt</span>(<span class="hljs-params">value</span>) </span>{ <span class="hljs-keyword">return</span> value <span class="hljs-keyword">instanceof</span> P ? value : <span class="hljs-keyword">new</span> P(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">resolve</span>) </span>{ resolve(value); }); }
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> (P || (P = <span class="hljs-built_in">Promise</span>))(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">resolve, reject</span>) </span>{
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fulfilled</span>(<span class="hljs-params">value</span>) </span>{ <span class="hljs-keyword">try</span> { step(generator.next(value)); } <span class="hljs-keyword">catch</span> (e) { reject(e); } }
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">rejected</span>(<span class="hljs-params">value</span>) </span>{ <span class="hljs-keyword">try</span> { step(generator[<span class="hljs-string">"throw"</span>](value)); } <span class="hljs-keyword">catch</span> (e) { reject(e); } }
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">step</span>(<span class="hljs-params">result</span>) </span>{ result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+<span class="hljs-keyword">var</span> __generator = (<span class="hljs-keyword">this</span> &amp;&amp; <span class="hljs-keyword">this</span>.__generator) || <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">thisArg, body</span>) </span>{
+    <span class="hljs-keyword">var</span> _ = { <span class="hljs-attr">label</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">sent</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">if</span> (t[<span class="hljs-number">0</span>] &amp; <span class="hljs-number">1</span>) <span class="hljs-keyword">throw</span> t[<span class="hljs-number">1</span>]; <span class="hljs-keyword">return</span> t[<span class="hljs-number">1</span>]; }, <span class="hljs-attr">trys</span>: [], <span class="hljs-attr">ops</span>: [] }, f, y, t, g;
+    <span class="hljs-keyword">return</span> g = { <span class="hljs-attr">next</span>: verb(<span class="hljs-number">0</span>), <span class="hljs-string">"throw"</span>: verb(<span class="hljs-number">1</span>), <span class="hljs-string">"return"</span>: verb(<span class="hljs-number">2</span>) }, <span class="hljs-keyword">typeof</span> <span class="hljs-built_in">Symbol</span> === <span class="hljs-string">"function"</span> &amp;&amp; (g[<span class="hljs-built_in">Symbol</span>.iterator] = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>; }), g;
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">verb</span>(<span class="hljs-params">n</span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">v</span>) </span>{ <span class="hljs-keyword">return</span> step([n, v]); }; }
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">step</span>(<span class="hljs-params">op</span>) </span>{
+        <span class="hljs-keyword">if</span> (f) <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"Generator is already executing."</span>);
+        <span class="hljs-keyword">while</span> (_) <span class="hljs-keyword">try</span> {
+            <span class="hljs-keyword">if</span> (f = <span class="hljs-number">1</span>, y &amp;&amp; (t = op[<span class="hljs-number">0</span>] &amp; <span class="hljs-number">2</span> ? y[<span class="hljs-string">"return"</span>] : op[<span class="hljs-number">0</span>] ? y[<span class="hljs-string">"throw"</span>] || ((t = y[<span class="hljs-string">"return"</span>]) &amp;&amp; t.call(y), <span class="hljs-number">0</span>) : y.next) &amp;&amp; !(t = t.call(y, op[<span class="hljs-number">1</span>])).done) <span class="hljs-keyword">return</span> t;
+            <span class="hljs-keyword">if</span> (y = <span class="hljs-number">0</span>, t) op = [op[<span class="hljs-number">0</span>] &amp; <span class="hljs-number">2</span>, t.value];
+            <span class="hljs-keyword">switch</span> (op[<span class="hljs-number">0</span>]) {
+                <span class="hljs-keyword">case</span> <span class="hljs-number">0</span>: <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>: t = op; <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-number">4</span>: _.label++; <span class="hljs-keyword">return</span> { <span class="hljs-attr">value</span>: op[<span class="hljs-number">1</span>], <span class="hljs-attr">done</span>: <span class="hljs-literal">false</span> };
+                <span class="hljs-keyword">case</span> <span class="hljs-number">5</span>: _.label++; y = op[<span class="hljs-number">1</span>]; op = [<span class="hljs-number">0</span>]; <span class="hljs-keyword">continue</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-number">7</span>: op = _.ops.pop(); _.trys.pop(); <span class="hljs-keyword">continue</span>;
+                <span class="hljs-keyword">default</span>:
+                    <span class="hljs-keyword">if</span> (!(t = _.trys, t = t.length &gt; <span class="hljs-number">0</span> &amp;&amp; t[t.length - <span class="hljs-number">1</span>]) &amp;&amp; (op[<span class="hljs-number">0</span>] === <span class="hljs-number">6</span> || op[<span class="hljs-number">0</span>] === <span class="hljs-number">2</span>)) { _ = <span class="hljs-number">0</span>; <span class="hljs-keyword">continue</span>; }
+                    <span class="hljs-keyword">if</span> (op[<span class="hljs-number">0</span>] === <span class="hljs-number">3</span> &amp;&amp; (!t || (op[<span class="hljs-number">1</span>] &gt; t[<span class="hljs-number">0</span>] &amp;&amp; op[<span class="hljs-number">1</span>] &lt; t[<span class="hljs-number">3</span>]))) { _.label = op[<span class="hljs-number">1</span>]; <span class="hljs-keyword">break</span>; }
+                    <span class="hljs-keyword">if</span> (op[<span class="hljs-number">0</span>] === <span class="hljs-number">6</span> &amp;&amp; _.label &lt; t[<span class="hljs-number">1</span>]) { _.label = t[<span class="hljs-number">1</span>]; t = op; <span class="hljs-keyword">break</span>; }
+                    <span class="hljs-keyword">if</span> (t &amp;&amp; _.label &lt; t[<span class="hljs-number">2</span>]) { _.label = t[<span class="hljs-number">2</span>]; _.ops.push(op); <span class="hljs-keyword">break</span>; }
+                    <span class="hljs-keyword">if</span> (t[<span class="hljs-number">2</span>]) _.ops.pop();
+                    _.trys.pop(); <span class="hljs-keyword">continue</span>;
+            }
+            op = body.call(thisArg, _);
+        } <span class="hljs-keyword">catch</span> (e) { op = [<span class="hljs-number">6</span>, e]; y = <span class="hljs-number">0</span>; } <span class="hljs-keyword">finally</span> { f = t = <span class="hljs-number">0</span>; }
+        <span class="hljs-keyword">if</span> (op[<span class="hljs-number">0</span>] &amp; <span class="hljs-number">5</span>) <span class="hljs-keyword">throw</span> op[<span class="hljs-number">1</span>]; <span class="hljs-keyword">return</span> { <span class="hljs-attr">value</span>: op[<span class="hljs-number">0</span>] ? op[<span class="hljs-number">1</span>] : <span class="hljs-keyword">void</span> <span class="hljs-number">0</span>, <span class="hljs-attr">done</span>: <span class="hljs-literal">true</span> };
+    }
+};
+<span class="hljs-keyword">var</span> __importDefault = (<span class="hljs-keyword">this</span> &amp;&amp; <span class="hljs-keyword">this</span>.__importDefault) || <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">mod</span>) </span>{
+    <span class="hljs-keyword">return</span> (mod &amp;&amp; mod.__esModule) ? mod : { <span class="hljs-string">"default"</span>: mod };
+};
+exports.__esModule = <span class="hljs-literal">true</span>;
+exports.app = <span class="hljs-keyword">void</span> <span class="hljs-number">0</span>;
+<span class="hljs-keyword">var</span> express_1 = __importDefault(<span class="hljs-built_in">require</span>(<span class="hljs-string">"express"</span>));
+<span class="hljs-keyword">var</span> express_graphql_1 = <span class="hljs-built_in">require</span>(<span class="hljs-string">"express-graphql"</span>);
+<span class="hljs-keyword">var</span> graphql_1 = __importDefault(<span class="hljs-built_in">require</span>(<span class="hljs-string">"./graphql"</span>));
+<span class="hljs-keyword">var</span> http_1 = <span class="hljs-built_in">require</span>(<span class="hljs-string">"http"</span>);
+<span class="hljs-keyword">var</span> socket_io_1 = <span class="hljs-built_in">require</span>(<span class="hljs-string">"socket.io"</span>);
+<span class="hljs-keyword">var</span> bcrypt_1 = <span class="hljs-built_in">require</span>(<span class="hljs-string">"bcrypt"</span>);
+<span class="hljs-keyword">var</span> user_1 = __importDefault(<span class="hljs-built_in">require</span>(<span class="hljs-string">"./db/user"</span>));
+<span class="hljs-keyword">var</span> app = (<span class="hljs-number">0</span>, express_1[<span class="hljs-string">"default"</span>])();
+exports.app = app;
+<span class="hljs-keyword">var</span> server = (<span class="hljs-number">0</span>, http_1.createServer)(app);
+<span class="hljs-keyword">var</span> io = <span class="hljs-keyword">new</span> socket_io_1.Server(server);
+<span class="hljs-keyword">var</span> sessions = {};
+<span class="hljs-built_in">require</span>(<span class="hljs-string">"./db"</span>);
+app.set(<span class="hljs-string">"view engine"</span>, <span class="hljs-string">"ejs"</span>);
+app.use(<span class="hljs-string">"/graphql"</span>, (<span class="hljs-number">0</span>, express_graphql_1.graphqlHTTP)({
+    <span class="hljs-attr">schema</span>: graphql_1[<span class="hljs-string">"default"</span>],
+    <span class="hljs-attr">rootValue</span>: {},
+    <span class="hljs-attr">graphiql</span>: <span class="hljs-literal">true</span>
+}));
+app.use(express_1[<span class="hljs-string">"default"</span>].json());
+app.get(<span class="hljs-string">"/"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>{
+    res.render(<span class="hljs-string">"homepage"</span>);
+});
+app.post(<span class="hljs-string">"/api/v1/user/register"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>{
+    <span class="hljs-keyword">return</span> __awaiter(<span class="hljs-keyword">this</span>, <span class="hljs-keyword">void</span> <span class="hljs-number">0</span>, <span class="hljs-keyword">void</span> <span class="hljs-number">0</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">var</span> body, email, password, name, hashedPassword, user, doc;
+        <span class="hljs-keyword">return</span> __generator(<span class="hljs-keyword">this</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">_a</span>) </span>{
+            <span class="hljs-keyword">switch</span> (_a.label) {
+                <span class="hljs-keyword">case</span> <span class="hljs-number">0</span>:
+                    body = req.body;
+                    email = body.email, password = body.password, name = body.name;
+                    <span class="hljs-keyword">return</span> [<span class="hljs-number">4</span>, (<span class="hljs-number">0</span>, bcrypt_1.hash)(password, <span class="hljs-number">10</span>)];
+                <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
+                    hashedPassword = _a.sent();
+                    user = <span class="hljs-keyword">new</span> user_1[<span class="hljs-string">"default"</span>]({ <span class="hljs-attr">email</span>: email, <span class="hljs-attr">password</span>: hashedPassword, <span class="hljs-attr">name</span>: name });
+                    <span class="hljs-keyword">return</span> [<span class="hljs-number">4</span>, user.save()];
+                <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:
+                    doc = _a.sent();
+                    res.json(doc);
+                    <span class="hljs-keyword">return</span> [<span class="hljs-number">2</span>];
+            }
+        });
+    });
+});
+app.post(<span class="hljs-string">"/api/v1/user/login"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>{
+    <span class="hljs-keyword">return</span> __awaiter(<span class="hljs-keyword">this</span>, <span class="hljs-keyword">void</span> <span class="hljs-number">0</span>, <span class="hljs-keyword">void</span> <span class="hljs-number">0</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">var</span> body, email, password, name, doc, hashedPassword, isvalid, error_1;
+        <span class="hljs-keyword">return</span> __generator(<span class="hljs-keyword">this</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">_a</span>) </span>{
+            <span class="hljs-keyword">switch</span> (_a.label) {
+                <span class="hljs-keyword">case</span> <span class="hljs-number">0</span>:
+                    body = req.body;
+                    email = body.email, password = body.password, name = body.name;
+                    <span class="hljs-keyword">return</span> [<span class="hljs-number">4</span>, user_1[<span class="hljs-string">"default"</span>].findOne({ <span class="hljs-attr">email</span>: email })];
+                <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
+                    doc = _a.sent();
+                    _a.label = <span class="hljs-number">2</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:
+                    _a.trys.push([<span class="hljs-number">2</span>, <span class="hljs-number">6</span>, , <span class="hljs-number">7</span>]);
+                    <span class="hljs-keyword">if</span> (!doc) <span class="hljs-keyword">return</span> [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+                    hashedPassword = doc.password;
+                    <span class="hljs-keyword">return</span> [<span class="hljs-number">4</span>, (<span class="hljs-number">0</span>, bcrypt_1.compare)(password, hashedPassword)];
+                <span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:
+                    isvalid = _a.sent();
+                    <span class="hljs-keyword">if</span> (!isvalid) {
+                        <span class="hljs-keyword">throw</span> <span class="hljs-string">"invalid password"</span>;
+                    }
+                    res.json({ <span class="hljs-attr">token</span>: <span class="hljs-string">"dfasdfdsfasfsfasdaffdsasfafdag"</span> });
+                    <span class="hljs-keyword">return</span> [<span class="hljs-number">3</span>, <span class="hljs-number">5</span>];
+                <span class="hljs-keyword">case</span> <span class="hljs-number">4</span>: <span class="hljs-keyword">throw</span> <span class="hljs-string">"Email and password is invalid"</span>;
+                <span class="hljs-keyword">case</span> <span class="hljs-number">5</span>: <span class="hljs-keyword">return</span> [<span class="hljs-number">3</span>, <span class="hljs-number">7</span>];
+                <span class="hljs-keyword">case</span> <span class="hljs-number">6</span>:
+                    error_1 = _a.sent();
+                    res.status(<span class="hljs-number">401</span>).json({ <span class="hljs-attr">status</span>: <span class="hljs-string">"error"</span>, <span class="hljs-attr">message</span>: error_1 });
+                    <span class="hljs-keyword">return</span> [<span class="hljs-number">3</span>, <span class="hljs-number">7</span>];
+                <span class="hljs-keyword">case</span> <span class="hljs-number">7</span>: <span class="hljs-keyword">return</span> [<span class="hljs-number">2</span>];
+            }
+        });
+    });
+});
+io.on(<span class="hljs-string">"connection"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">socket</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"new connection created"</span>);
+    socket.on(<span class="hljs-string">"send-message"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{
+        <span class="hljs-keyword">var</span> message = <span class="hljs-built_in">JSON</span>.parse(data);
+        <span class="hljs-built_in">console</span>.log(message);
+        <span class="hljs-keyword">if</span> (sessions[message.user]) {
+            sessions[message.user].emit(<span class="hljs-string">"response-message"</span>, { <span class="hljs-attr">message</span>: message.message });
+        }
+    });
+    socket.on(<span class="hljs-string">"user-info"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>) </span>{
+        <span class="hljs-keyword">var</span> message = <span class="hljs-built_in">JSON</span>.parse(data);
+        <span class="hljs-keyword">if</span> (!sessions[message.user]) {
+            sessions[message.user] = socket;
+            socket.emit(<span class="hljs-string">"current-users"</span>, <span class="hljs-built_in">Object</span>.keys(sessions));
+            io.emit(<span class="hljs-string">"new-user"</span>, { <span class="hljs-attr">name</span>: message.user });
+        }
+        <span class="hljs-keyword">else</span> {
+            socket.emit(<span class="hljs-string">"error"</span>, { <span class="hljs-attr">message</span>: <span class="hljs-string">"duplicate user"</span> });
+        }
+    });
+});
+server.listen(<span class="hljs-number">8000</span>);
+
+</pre>
+        </td>
+      </tr>
+    
+  </tbody>
+</table>
+
+  </div>
+</body>
+</html>

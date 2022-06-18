@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "noImplicitAny": true,
+      "removeComments": true,
+      "preserveConstEnums": true,
+      "sourceMap": false,
+      "esModuleInterop": true,
+      "outDir": "build",
+      "skipLibCheck": true
+      
+    },
+    "exclude": ["./test/**/*", "./node_modules", "coverage"]
+  }

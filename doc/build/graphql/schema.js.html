@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>schema.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="../../doc-style.css" />
+  <script src="../../doc-filelist.js"></script>
+  <script>
+    var relativeDir = "../../";
+    var thisFile = "build\\graphql\\schema.js";
+    var defaultSidebar = true;
+  </script>
+  <script src="../../doc-script.js"></script>
+
+</head>
+<body>
+  <div id="sidebar_wrapper">
+    <div id="sidebar_switch">
+      <span class="tree">Files</span>
+      <span class="headings">Headings</span>
+    </div>
+    <div id="tree"></div>
+    <div id="headings">
+
+    </div>
+  </div>
+  <div id="sidebar-toggle"></div>
+  <div id="container">
+    <div class="background highlight"></div>
+<table cellpadding="0" cellspacing="0">
+  <tbody>
+    
+      <tr>
+        <td class="docs">
+          <h1>schema.js</h1>
+        </td>
+        <td class="code highlight"></td>
+      </tr>
+    
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-1" id="section-1"></a>
+</div>
+
+        </td>
+        <td class="code highlight">
+          <pre class="javascript"><span class="hljs-meta">"use strict"</span>;
+<span class="hljs-keyword">var</span> __importDefault = (<span class="hljs-keyword">this</span> &amp;&amp; <span class="hljs-keyword">this</span>.__importDefault) || <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">mod</span>) </span>{
+    <span class="hljs-keyword">return</span> (mod &amp;&amp; mod.__esModule) ? mod : { <span class="hljs-string">"default"</span>: mod };
+};
+exports.__esModule = <span class="hljs-literal">true</span>;
+<span class="hljs-keyword">var</span> graphql_1 = <span class="hljs-built_in">require</span>(<span class="hljs-string">"graphql"</span>);
+<span class="hljs-keyword">var</span> product_1 = __importDefault(<span class="hljs-built_in">require</span>(<span class="hljs-string">"../db/product"</span>));
+<span class="hljs-keyword">var</span> products_1 = <span class="hljs-built_in">require</span>(<span class="hljs-string">"./types/products"</span>);
+<span class="hljs-keyword">var</span> RootSchema = <span class="hljs-keyword">new</span> graphql_1.GraphQLObjectType({
+    <span class="hljs-attr">name</span>: <span class="hljs-string">"root"</span>,
+    <span class="hljs-attr">fields</span>: {
+        <span class="hljs-attr">products</span>: {
+            <span class="hljs-attr">type</span>: <span class="hljs-keyword">new</span> graphql_1.GraphQLList(products_1.Product),
+            <span class="hljs-attr">resolve</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                <span class="hljs-keyword">return</span> product_1[<span class="hljs-string">"default"</span>].find();
+            }
+        },
+        <span class="hljs-attr">product</span>: {
+            <span class="hljs-attr">type</span>: products_1.Product,
+            <span class="hljs-attr">args</span>: { <span class="hljs-attr">id</span>: { <span class="hljs-attr">type</span>: graphql_1.GraphQLString } },
+            <span class="hljs-attr">resolve</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">context, args</span>) </span>{
+                <span class="hljs-keyword">return</span> product_1[<span class="hljs-string">"default"</span>].findOne({ <span class="hljs-attr">_id</span>: args.id });
+            }
+        }
+    }
+});
+exports[<span class="hljs-string">"default"</span>] = RootSchema;
+
+</pre>
+        </td>
+      </tr>
+    
+  </tbody>
+</table>
+
+  </div>
+</body>
+</html>
